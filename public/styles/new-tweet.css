@@ -1,0 +1,53 @@
+.box {
+  font-weight: bold;
+}
+
+.container {
+  height: 180px
+}
+
+.new-tweet {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* .form-box {
+  display: flex;
+  justify-content: center;
+} */
+
+form.form-box {
+display: flex;
+flex-direction: column;
+
+}
+
+#tweet-text {
+  display: flex;
+  resize: none;
+  width: 100%;
+  background-color: #CBCCAA;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom-color: black;
+  border-bottom-width: 3px;
+}
+
+#tweet-text:focus {
+  outline: none;
+}
+
+.below-tweet {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive, sans-serif;
+  margin-top: 10px;
+}
+
+
+button {
+  background-color: #4056A1;
+  color: #FFFFFF;
+  border: 0
+}
