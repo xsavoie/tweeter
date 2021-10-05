@@ -1,22 +1,12 @@
-
 .box {
   font-weight: bold;
 }
-
-/* .container {
-  height: 180px
-} */
 
 .new-tweet {
   width: 90%;
   margin: 0 auto;
   margin-top: 5px
 }
-
-/* .form-box {
-  display: flex;
-  justify-content: center;
-} */
 
 form.form-box {
   display: flex;
@@ -46,7 +36,6 @@ form.form-box {
   font-family: 'Bungee', cursive, sans-serif;
   margin-top: 10px;
 }
-
 
 button {
   background-color: #4056A1;

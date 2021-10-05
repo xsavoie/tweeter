@@ -1,12 +1,10 @@
 .header {
   display: flex;
-  /* height: 400px; */
   align-items: center;
-  /* justify-content: center; */
   flex-direction: column;
   background-image: url("/images/beige-paper.png");
   background-color: #7c79ad;
   color: #FFFFFF;
-  padding-top: 120px
+  padding-top: 120px;
 }
 
