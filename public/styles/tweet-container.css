@@ -1,0 +1,92 @@
+.submitted-tweets {
+  margin-top: 50px;
+  width: 90%;
+  height: 100%;
+  border: 4px solid black
+}
+
+.submitted-tweets:hover {
+  box-shadow: 5px 5px #8A8B81 ;
+}
+
+.tweet-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 3%;
+  margin-left: 3%;
+}
+
+.user-icon-name {
+  display: flex;
+  flex-direction: row;
+}
+
+#tweeter-avatar {
+  height: 64px;
+  width: 64px;
+  margin-top: 15px;
+  margin-right: 5px;
+}
+
+#tweeter-handle {
+  opacity: 0.5;
+}
+
+.tweet-content {
+  width: 90%;
+  margin-right: 3%;
+  margin-left: 4%;
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+.tweet-footer {
+  display: flex;
+  flex-direction: row;
+  width: 96%;
+  height: 70px;
+  justify-content: space-between;
+  margin-left: 2%;
+  margin-right: 2%;
+  padding-top: 10px;
+  border-top: 4px solid #000; 
+}
+
+#date-posted {
+  display: flex;
+  align-items: center;
+  margin-left: 3%;
+  margin-top: 10px
+}
+
+.tweet-footer-icons {
+  display: flex;
+  color: #4056A1;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2%;
+  margin-bottom: 30px;
+
+}
+
+.fa-flag {
+  padding-right: 5px;
+}
+
+.fa-retweet {
+  padding-right: 5px;
+}
+
+.fa-flag:hover {
+  color: #C7AE12  ;
+}
+
+.fa-retweet:hover {
+  color: #C7AE12 ;
+}
+
+.fa-heart:hover {
+  color: #C7AE12 ;
+}

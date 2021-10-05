@@ -3,13 +3,14 @@
   font-weight: bold;
 }
 
-.container {
+/* .container {
   height: 180px
-}
+} */
 
 .new-tweet {
   width: 90%;
   margin: 0 auto;
+  margin-top: 5px
 }
 
 /* .form-box {
