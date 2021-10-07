@@ -1,17 +1,11 @@
-.box {
+.tweet-input-div {
   font-weight: bold;
 }
 
 .new-tweet {
   width: 90%;
   margin: 0 auto;
-  margin-top: 5px
-}
-
-form.form-box {
-  display: flex;
-  flex-direction: column;
-  
+  margin-top: 20px
 }
 
 #tweet-text {
@@ -51,10 +45,7 @@ form.form-box {
   color: red
 }
 
-.separator{
-  opacity: 0;
-}
-
+/* error message for invalid tweet */
 #error-message {
   font-weight: bold;
   padding: 0 6px;
@@ -64,6 +55,7 @@ form.form-box {
 .error-div {
   border: 4px solid #E52313;
   border-radius: 2px;
+  margin-bottom: 5px;
 }
 
 .fa-exclamation-triangle {
@@ -73,3 +65,4 @@ form.form-box {
 #first-triangle {
   margin-left: 38%;
 }
+

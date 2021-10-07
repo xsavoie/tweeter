@@ -59,16 +59,14 @@
     <main class="container">
       
       <section hidden class="new-tweet" >
-        <!-- try changing css instead -->
-        <hr class="separator"> 
         <div class ="error-div" hidden>
           <i id="first-triangle" class="fas fa-exclamation-triangle"></i>
           <label id="error-message"></label>
           <i class="fas fa-exclamation-triangle"></i>
         </div>
-        <hr class="separator">
+
         <form action="/tweets" method="POST" class="form-box">
-          <div class="box">
+          <div class="tweet-input-div">
             <label for="tweet-text" id="tweet-label">What are you humming about?</label>
             <textarea name="text" id="tweet-text"></textarea>
           </div>

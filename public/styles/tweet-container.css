@@ -43,8 +43,7 @@
   opacity: 0.5;
 }
 
-/* body */
-.tweet-content {
+.tweet-body {
   width: 90%;
   margin-right: 3%;
   margin-left: 4%;

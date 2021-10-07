@@ -18,7 +18,7 @@ $(() => {
     
     // Building the body
     const $tweetContent = $("<h3>").text(tweet.content.text);
-    const $body = $("<div>").addClass("tweet-content");
+    const $body = $("<div>").addClass("tweet-body");
     $body.append($tweetContent);
     
     // Building the footer
@@ -41,7 +41,7 @@ $(() => {
   
   const renderTweets = function(data) {
     const $tweetContainer = $(".submitted-tweets");
-    $tweetContainer.empty()
+    $tweetContainer.empty();
     
     for (const tweet of data) {
       const $tweetToDiplay = createTweetElement(tweet);
@@ -88,24 +88,23 @@ $(() => {
 
     const errorMsg = tweetValidate(textArea);
     const $errorLabel = $("#error-message");
-    const $errorDiv = $(".error-div")
+    const $errorDiv = $(".error-div");
     if (errorMsg) {
       $errorLabel.text(errorMsg);
-      $errorDiv.slideDown(400)
+      $errorDiv.slideDown(400);
       return;
     } else if ($errorLabel.text()) {
-      $errorDiv.slideUp(400)
+      $errorDiv.slideUp(400);
     }
     
     const serializedData = $(this).serialize();
-    console.log(serializedData); // test log
     
     $.post("/tweets", serializedData, (response) => {
       console.log(response);
       // clears text-box, error msg and reset char counter
-      $errorLabel.empty(); 
+      $errorLabel.empty();
       this.reset();
-      $(".counter").text(140)
+      $(".counter").text(140);
 
       loadTweets();
     });
@@ -117,12 +116,12 @@ $(() => {
     $newTweet.slideToggle("slow");
     $textArea = $("#tweet-text");
     $textArea.focus();
-  })
+  });
 
   // button to scroll back to top of page
   $("#scroll-btn").on("click", function() {
     $(window).scrollTop(0);
-  })
+  });
 
   // show/hide scroll-btn
   $(window).scroll(function() {
@@ -131,6 +130,6 @@ $(() => {
     } else {
       $("#scroll-btn").fadeOut();
     }
-  })
+  });
 
 });
