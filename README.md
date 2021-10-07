@@ -3,7 +3,9 @@
 Tweeter is a simple, single-page Twitter clone.
 
 Tweeter uses Jquery to dynamically create HTML for new tweets, and AJAX to render them on the page without any interruption in user experience. 
+
 The app features all of the stretch goals for the project. Namely a slide down tweet box to compose and submit new tweets, as well a button to scroll to the top of the page, that will fade in and out depending on window position. 
+
 Tweeter also uses SASS to organize CSS, through the use of variables and mixins.
 
 
@@ -34,3 +36,4 @@ Tweeter also uses SASS to organize CSS, through the use of variables and mixins.
 - Node 5.10.x or above
 - body-parser
 - chance
+- md5
