@@ -41,6 +41,7 @@ $(() => {
   
   const renderTweets = function(data) {
     const $tweetContainer = $(".submitted-tweets");
+    $tweetContainer.empty()
     
     for (const tweet of data) {
       const $tweetToDiplay = createTweetElement(tweet);
@@ -64,14 +65,14 @@ $(() => {
 
   loadTweets();
 
-  // Helper function to validate
-  const tweetValidate = (tweetToVerify) => {
+  // Helper function to validate tweet
+  const tweetValidate = (tweetToValidate) => {
     let errorMsg = "";
-    if (tweetToVerify.length > 140) {
+    if (tweetToValidate.length > 140) {
       errorMsg = "Too many characters";
       return errorMsg;
     }
-    if (tweetToVerify.length === 0) {
+    if (tweetToValidate.length === 0) {
       errorMsg = "Cannot be empty";
       return errorMsg;
     }
@@ -82,21 +83,18 @@ $(() => {
   const $form = $(".form-box");
   $form.on("submit", function(event) {
     event.preventDefault();
-    console.log("new tweet submitted"); // not needed
     
-    const tweetText = $("#tweet-text").val();
+    const textArea = $("#tweet-text").val();
 
-    const errorMsg = tweetValidate(tweetText);
+    const errorMsg = tweetValidate(textArea);
     const $errorLabel = $("#error-message");
     if (errorMsg) {
       $errorLabel.text(errorMsg);
       $errorLabel.slideDown("800");
-      // $errorLabel.addClass("error-message-flex")
       return;
     } else if ($errorLabel.text()) {
       $errorLabel.slideUp("800");
       $errorLabel.empty();
-      // $errorLabel.removeClass("error-message-flex")
     }
 
     const serializedData = $(this).serialize();
@@ -104,11 +102,21 @@ $(() => {
     
     $.post("/tweets", serializedData, (response) => {
       console.log(response);
+      // clears text-box and reset char counter
+      this.reset();
+      $(".counter").text(140)
 
       loadTweets();
     });
   });
 
+  // button to display new-tweet section
+  $("#dropdown-btn").on("click", function() {
+    $newTweet = $(".new-tweet");
+    $newTweet.slideToggle("slow");
+    $textArea = $("#tweet-text");
+    $textArea.focus();
+  })
 
 });
 
