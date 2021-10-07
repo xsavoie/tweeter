@@ -15,8 +15,10 @@ html {
  */
 
 body {
+  display: flex;
+  flex-direction: column;
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #CBCCAA;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;
 }
@@ -44,3 +46,35 @@ main {
   padding: 30px;
   border-radius: 50%;
 }
+
+
+/* Tablet Styles */
+@media only screen and (min-width: 768px) {
+  
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1100px)  {
+  body {
+    flex-direction: row;
+  }
+  main {
+    margin-top: 120px;
+  }
+  nav {
+    margin-bottom: 100px;
+  }
+  .profile-header {
+    height: 500px;
+    width: 900px;
+    margin-top: 250px;
+    padding-top: 100px;
+    margin-left: 100px;
+    /* padding-bottom: 100px; */
+    padding-top: 0px;
+  }
+}
+
+
+
+

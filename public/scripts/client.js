@@ -95,15 +95,15 @@ $(() => {
       return;
     } else if ($errorLabel.text()) {
       $errorDiv.slideUp(400)
-      $errorLabel.empty(); //move in post for smoother animation??
     }
-
+    
     const serializedData = $(this).serialize();
     console.log(serializedData); // test log
     
     $.post("/tweets", serializedData, (response) => {
       console.log(response);
-      // clears text-box and reset char counter
+      // clears text-box, error msg and reset char counter
+      $errorLabel.empty(); 
       this.reset();
       $(".counter").text(140)
 
@@ -124,7 +124,7 @@ $(() => {
     $(window).scrollTop(0);
   })
 
-  // show/hide button 
+  // show/hide scroll-btn
   $(window).scroll(function() {
     if ($(this).scrollTop()) {
       $("#scroll-btn").fadeIn();

@@ -29,6 +29,9 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 
   </head>
 
@@ -37,18 +40,18 @@
     <nav>
         <span class="title">tweeter</span>
         <div class="right-nav">
-          <span class="new-tweet-button">Write a new tweet</span>
+          <span class="new-tweet-nav">Write a new tweet</span>
           <button id="dropdown-btn"><i class="fas fa-angle-double-down"></i></button>
         </div>
     </nav>
 
-    <header class="header">
+    <header class="profile-header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
       <br>
       <div>
-          <h2>Your Name</h2>
+          <h2>Xavier Savoie</h2>
       </div>
   </header>
 
@@ -56,7 +59,8 @@
     <main class="container">
       
       <section hidden class="new-tweet" >
-        <hr class="separator">
+        <!-- try changing css instead -->
+        <hr class="separator"> 
         <div class ="error-div" hidden>
           <i id="first-triangle" class="fas fa-exclamation-triangle"></i>
           <label id="error-message"></label>
@@ -76,7 +80,7 @@
       </section>
 
       <section class="submitted-tweets" id="tweets-container">
-        
+
       </section>
       
       <button hidden id="scroll-btn"><i class="fas fa-angle-double-up fa-xl"></i></button>
