@@ -1,9 +1,11 @@
+@use "styleVars" as v;
+
 .profile-header {
-  display: flex;
-  flex-direction: column;
+  @include v.flexColumn;
   align-items: center;
   background-image: url("/images/beige-paper.png");
   background-color: #71715b;
   color: #FFFFFF;
   padding-top: 120px;
 }
+

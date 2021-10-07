@@ -1,0 +1,14 @@
+$backgroundColor: #CBCCAA;
+$navBlue: #4056A1;
+$iconColor: #C7AE12;
+$errorRed: #E52313;
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+}

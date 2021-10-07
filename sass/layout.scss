@@ -1,3 +1,4 @@
+@use "styleVars" as v;
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
@@ -6,7 +7,6 @@
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -14,51 +14,50 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
-  display: flex;
-  flex-direction: column;
+  @include v.flexColumn;
   color: #545149;
-  background-color: #CBCCAA;
-  font-family: "Source Sans Pro", sans-serif;
+  background-color: v.$backgroundColor;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
 main {
-  display: flex;
-  flex-direction: column;
+  @include v.flexColumn;
   align-items: center;
   width: 90%;
   margin-left: 5%;
-  background-color: #CBCCAA;
+  background-color: v.$backgroundColor;
 }
 
 #scroll-btn {
   position: fixed;
   bottom: 15px;
   right: 15px;
-  background-color: #E52313;
+  background-color: v.$errorRed;
   margin-left: 90%;
   padding: 30px;
   border-radius: 50%;
 }
 
+
+
 /* Desktop styles */
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1100px)  {
   body {
     flex-direction: row;
   }
-
   main {
     margin-top: 120px;
   }
-
   nav {
     margin-bottom: 100px;
   }
-
   .profile-header {
     height: 500px;
     width: 900px;
@@ -68,3 +67,7 @@ main {
     padding-top: 0px;
   }
 }
+
+
+
+

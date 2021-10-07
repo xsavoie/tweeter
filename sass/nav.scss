@@ -1,0 +1,57 @@
+@use "styleVars" as v;
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: v.$navBlue;
+  color: #FFFFFF;
+  height: 120px;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  .title {
+    display: flex;
+    align-items: center;
+    font-family: 'Bungee', cursive, sans-serif;
+    margin: 0 1.5em;
+    font-size: 36px;
+  }
+
+  .right-nav {
+    @include v.flexColumn;
+    align-items: center;
+    margin-right: 1.5em;
+    margin-top: 45px;
+
+    .new-tweet-nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      font-weight: 600;
+    }
+  
+    .fa-angle-double-down {
+    display: flex;
+    color: v.$errorRed;
+    }
+  
+    #dropdown-btn {
+      background-color: v.$navBlue;
+      border: none;
+    }
+  
+    #dropdown-btn:hover {
+      transform: translateY(-3px);
+    }
+  }
+
+}
+
+
+
+
+
+
+

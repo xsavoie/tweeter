@@ -1,14 +1,9 @@
-.tweet-input-div {
-  font-weight: bold;
-}
-
 .new-tweet {
   width: 90%;
   margin: 0 auto;
-  margin-top: 20px
+  margin-top: 20px;
 }
-
-#tweet-text {
+.new-tweet #tweet-text {
   display: flex;
   resize: none;
   width: 100%;
@@ -19,50 +14,44 @@
   border-bottom-color: black;
   border-bottom-width: 3px;
 }
-
-#tweet-text:focus {
+.new-tweet .tweet-input-div {
+  font-weight: bold;
+}
+.new-tweet #tweet-text:focus {
   outline: none;
 }
-
-.below-tweet {
+.new-tweet .below-tweet {
   display: flex;
   justify-content: space-between;
-  font-family: 'Bungee', cursive, sans-serif;
+  font-family: "Bungee", cursive, sans-serif;
   margin-top: 10px;
 }
-
-#submit-btn {
+.new-tweet .below-tweet #submit-btn {
   background-color: #4056A1;
   color: #FFFFFF;
-  border: 0
+  border: 0;
 }
-
-#submit-btn:hover {
-  box-shadow: 3px 3px #8A8B81
+.new-tweet .below-tweet #submit-btn:hover {
+  box-shadow: 3px 3px #8A8B81;
 }
-
-.too-many-chars {
-  color: red
-}
-
-/* error message for invalid tweet */
-#error-message {
-  font-weight: bold;
-  padding: 0 6px;
+.new-tweet .below-tweet .too-many-chars {
   color: #E52313;
 }
 
+/* error message for invalid tweet */
 .error-div {
   border: 4px solid #E52313;
   border-radius: 2px;
   margin-bottom: 5px;
 }
-
-.fa-exclamation-triangle {
+.error-div #error-message {
+  font-weight: bold;
+  padding: 0 6px;
   color: #E52313;
 }
-
-#first-triangle {
+.error-div .fa-exclamation-triangle {
+  color: #E52313;
+}
+.error-div #first-triangle {
   margin-left: 38%;
 }
-
