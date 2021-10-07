@@ -43,6 +43,10 @@ button {
   border: 0
 }
 
+#submit-btn:hover {
+  box-shadow: 3px 3px #8A8B81
+}
+
 .too-many-chars {
   color: red
 }
@@ -52,8 +56,20 @@ button {
 }
 
 #error-message {
-  margin-left: 30%;
-  padding: 0 10%;
-  color: red;
-  border: 4px solid red; 
+  font-weight: bold;
+  padding: 0 6px;
+  color: #E52313;
+}
+
+.error-div {
+  border: 4px solid #E52313;
+  border-radius: 2px;
+}
+
+.fa-exclamation-triangle {
+  color: #E52313;
+}
+
+#first-triangle {
+  margin-left: 38%;
 }

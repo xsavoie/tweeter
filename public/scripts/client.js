@@ -88,13 +88,14 @@ $(() => {
 
     const errorMsg = tweetValidate(textArea);
     const $errorLabel = $("#error-message");
+    const $errorDiv = $(".error-div")
     if (errorMsg) {
       $errorLabel.text(errorMsg);
-      $errorLabel.slideDown("800");
+      $errorDiv.slideDown(400)
       return;
     } else if ($errorLabel.text()) {
-      $errorLabel.slideUp("800");
-      $errorLabel.empty();
+      $errorDiv.slideUp(400)
+      $errorLabel.empty(); //move in post for smoother animation??
     }
 
     const serializedData = $(this).serialize();
@@ -118,6 +119,18 @@ $(() => {
     $textArea.focus();
   })
 
+  // button to scroll back to top of page
+  $("#scroll-btn").on("click", function() {
+    $(window).scrollTop(0);
+  })
+
+  // show/hide button 
+  $(window).scroll(function() {
+    if ($(this).scrollTop()) {
+      $("#scroll-btn").fadeIn();
+    } else {
+      $("#scroll-btn").fadeOut();
+    }
+  })
+
 });
-
-

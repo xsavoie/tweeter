@@ -34,3 +34,13 @@ main {
   align-items: center;
   background-color: #CBCCAA;
 }
+
+#scroll-btn {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background-color: red;
+  margin-left: 90%;
+  padding: 30px;
+  border-radius: 50%;
+}

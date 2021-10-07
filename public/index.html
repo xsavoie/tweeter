@@ -39,7 +39,6 @@
         <div class="right-nav">
           <span class="new-tweet-button">Write a new tweet</span>
           <button id="dropdown-btn"><i class="fas fa-angle-double-down"></i></button>
-          <!-- <i class="fas fa-angle-double-down"></i> -->
         </div>
     </nav>
 
@@ -58,7 +57,11 @@
       
       <section hidden class="new-tweet" >
         <hr class="separator">
-        <label hidden id="error-message"></label>
+        <div class ="error-div" hidden>
+          <i id="first-triangle" class="fas fa-exclamation-triangle"></i>
+          <label id="error-message"></label>
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
         <hr class="separator">
         <form action="/tweets" method="POST" class="form-box">
           <div class="box">
@@ -76,6 +79,8 @@
         
       </section>
       
+      <button hidden id="scroll-btn"><i class="fas fa-angle-double-up fa-xl"></i></button>
+
     </main>
     
   </body>
