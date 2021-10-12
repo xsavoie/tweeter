@@ -27,6 +27,7 @@ nav .right-nav .new-tweet-nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  white-space: nowrap;
   font-weight: 600;
 }
 nav .right-nav .fa-angle-double-down {

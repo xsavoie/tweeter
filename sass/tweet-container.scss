@@ -50,6 +50,10 @@
     margin-right: 3%;
     margin-left: 4%;
   }
+
+  h3 {
+    word-break: break-all;
+  }
   
   .tweet-footer {
     @include v.flexRow;

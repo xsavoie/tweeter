@@ -43,6 +43,9 @@
   margin-right: 3%;
   margin-left: 4%;
 }
+.submitted-tweets h3 {
+  word-break: break-all;
+}
 .submitted-tweets .tweet-footer {
   display: flex;
   flex-direction: row;

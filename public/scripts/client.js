@@ -1,9 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 $(() => {
   
   const createTweetElement = function(tweet) {
@@ -65,6 +59,7 @@ $(() => {
 
   loadTweets();
 
+
   // Helper function to validate tweet
   const tweetValidate = (tweetToValidate) => {
     let errorMsg = "";
@@ -100,36 +95,16 @@ $(() => {
     const serializedData = $(this).serialize();
     
     $.post("/tweets", serializedData, (response) => {
-      console.log(response);
+
       // clears text-box, error msg and reset char counter
       $errorLabel.empty();
       this.reset();
-      $(".counter").text(140);
+      $(".counter").html(140);
 
       loadTweets();
     });
   });
 
-  // button to display new-tweet section
-  $("#dropdown-btn").on("click", function() {
-    $newTweet = $(".new-tweet");
-    $newTweet.slideToggle("slow");
-    $textArea = $("#tweet-text");
-    $textArea.focus();
-  });
-
-  // button to scroll back to top of page
-  $("#scroll-btn").on("click", function() {
-    $(window).scrollTop(0);
-  });
-
-  // show/hide scroll-btn
-  $(window).scroll(function() {
-    if ($(this).scrollTop()) {
-      $("#scroll-btn").fadeIn();
-    } else {
-      $("#scroll-btn").fadeOut();
-    }
-  });
-
 });
+
+// separate functions into different files ie composer scripts
